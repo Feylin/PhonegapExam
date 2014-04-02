@@ -1,36 +1,27 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+<!DOCTYPE HTML>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
-        <title>Hello World</title>
+        <meta name="viewport" content="width=320; user-scalable=no" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <title>Minimal AppLaud App</title>
+        <link rel="styleSheet" href="css/index.css"/>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     </head>
     <body>
-<iframe height="100%" width="100%" src="http://www.exam.c-bjerregaard.dk"></iframe>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+        <h2>Geolocation</h2>
+        <blockquote>
+            <p>The <code>geolocation</code> object provides access to the device's GPS sensor.</p>
+        </blockquote>
+        <h4 class="help"><b>Toggle</b> to stop/start geolocation watch.
+        <br/><b>Get Current</b> for one-time geolocation reading.</h4>
+        <a class="btn deux" onclick="toggleWatchPosition();">Toggle</a>
+        <a class="btn deux" onclick="getCurrentPosition();">Get Current</a>
+        <div class="result-block">
+            <span id="cur_position"></span>
+        </div>
+        <img id="map" alt="Location Map"/>
+        
+        
+        <script src="geolocation.js"></script>
     </body>
 </html>
